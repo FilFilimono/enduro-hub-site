@@ -639,6 +639,102 @@
         .wrap-outer {
             width: 100%
         }
+
+        .address-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 14px;
+            background: #101012;
+            border: 1px solid rgba(237, 234, 229, 0.07);
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 6px;
+            transition: border-color .18s, background .18s
+        }
+
+        .address-row:hover {
+            background: #141416;
+            border-color: rgba(217, 123, 38, 0.25)
+        }
+
+        .address-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(217, 123, 38, 0.1);
+            border: 1px solid rgba(217, 123, 38, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0
+        }
+
+        .address-text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 2px
+        }
+
+        .address-main {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #EDEAE5
+        }
+
+        .address-sub {
+            font-size: 11px;
+            font-weight: 300;
+            letter-spacing: .5px;
+            color: rgba(237, 234, 229, 0.38)
+        }
+
+        .address-arr {
+            color: rgba(217, 123, 38, 0.5);
+            flex-shrink: 0;
+            transition: transform .18s, color .18s
+        }
+
+        .address-row:hover .address-arr {
+            color: var(--orange);
+            transform: translate(2px, -2px)
+        }
+
+        .map-address-block {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 10px 14px;
+            background: #101012;
+            border: 1px solid rgba(237, 234, 229, 0.07);
+            border-radius: 4px 4px 0 0;
+            border-bottom: none;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: rgba(237, 234, 229, 0.6);
+            line-height: 1.4
+        }
+
+        .map-box {
+            border-radius: 0 0 4px 4px !important
+        }
+
+        .map-addr-text {
+            font-family: 'Barlow', sans-serif;
+            font-size: 12px;
+            font-weight: 300;
+            letter-spacing: .5px;
+            color: rgba(237, 234, 229, 0.55);
+            margin-bottom: 8px;
+            line-height: 1.5;
+            padding-left: 2px
+        }
     </style>
 </head>
 
@@ -755,11 +851,12 @@
                 <div class="sec-header-line"></div>
             </div>
 
+            <p class="map-addr-text">📍 ГСПК Лесной-1, 4к16 · Боровлянский сельсовет · Минский район</p>
             <div class="map-box">
-                <a href="https://yandex.by/maps/?text=%D0%B3%D1%81%D0%BF%D0%BA+%D0%BB%D0%B5%D1%81%D0%BD%D0%BE%D0%B9+1+4%D0%BA16&z=16"
+                <a href="https://yandex.by/maps/?text=%D0%B3%D1%81%D0%BF%D0%BA%20%D0%BB%D0%B5%D1%81%D0%BD%D0%BE%D0%B9%201%204%D0%BA16%2C%20%D0%9C%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%2C%20%D0%91%D0%BE%D1%80%D0%BE%D0%B2%D0%BB%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D1%81%D0%B5%D0%BB%D1%8C%D1%81%D0%BE%D0%B2%D0%B5%D1%82&z=16"
                     target="_blank" class="map-open-link" aria-label="Открыть в картах"></a>
                 <iframe
-                    src="https://yandex.ru/map-widget/v1/?text=%D0%B3%D1%81%D0%BF%D0%BA+%D0%BB%D0%B5%D1%81%D0%BD%D0%BE%D0%B9+1+4%D0%BA16&z=16&l=map"
+                    src="https://yandex.ru/map-widget/v1/?text=%D0%B3%D1%81%D0%BF%D0%BA%20%D0%BB%D0%B5%D1%81%D0%BD%D0%BE%D0%B9%201%204%D0%BA16%2C%20%D0%9C%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%2C%20%D0%91%D0%BE%D1%80%D0%BE%D0%B2%D0%BB%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D1%81%D0%B5%D0%BB%D1%8C%D1%81%D0%BE%D0%B2%D0%B5%D1%82&z=16&l=map"
                     allowfullscreen loading="lazy">
                 </iframe>
                 <div class="map-badge">
